@@ -1,5 +1,3 @@
-QTGENST02229
-
 <lables>
     <fullName>AAAAAAAAAAAAAAAAA</fullName>
     <language>en_us</language>
