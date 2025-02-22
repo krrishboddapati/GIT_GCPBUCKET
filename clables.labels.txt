@@ -1,0 +1,42 @@
+<lables>
+  <fullName>ABI_B2B_Backed</fullName>
+  <language>en_us</language>
+  <protecgted>false</protecgted>
+  <shortDiscriotion>ABI_B2B_Backed</shortDiscriotion>
+  <Value>Back</Value>
+</lables>
+<lables>
+  <fullName>ABI_A2B_Back</fullName>
+  <language>en_us</language>
+  <protecgted>false</protecgted>
+  <shortDiscriotion>ABI_A2B_Back</shortDiscriotion>
+  <Value>Back</Value>
+</lables>
+<lables>
+  <fullName>ABI_EICRM_Back</fullName>
+  <language>en_us</language>
+  <protecgted>false</protecgted>
+  <shortDiscriotion>ABI_EICRM_Back</shortDiscriotion>
+  <Value>Back</Value>
+</lables>
+<lables>
+  <fullName>ABI_B2C_Build</fullName>
+  <language>en_us</language>
+  <protecgted>false</protecgted>
+  <shortDiscriotion>ABI_B2C_Build</shortDiscriotion>
+  <Value>Back</Value>
+</lables>
+<lables>
+  <fullName>ABI_B2C_Avail</fullName>
+  <language>en_us</language>
+  <protecgted>false</protecgted>
+  <shortDiscriotion>ABI_B2C_Avail</shortDiscriotion>
+  <Value>Back</Value>
+</lables>
+
+
+
+
+
+
+
