@@ -34,6 +34,9 @@ jobs:
          echo "Do something with this ${changed_file}."
           # def c_file = ${changed_file}
          done
+    - name: Print file names
+      run: |
+          echo "${changes_file}"
     #- name: Deploy via GCS
     #  run: |
     #    gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
