@@ -36,6 +36,7 @@ jobs:
          done
          c_file=${changed_file}
          echo "cfile ${c_file}"
+    - run: echo "last ${c_file}"   
     
         # gsutil -m rm  gs://git-gcp-cbase/${changes_file} || echo "$?"
         # gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
