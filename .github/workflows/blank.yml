@@ -36,7 +36,7 @@ jobs:
          done
     - name: Print file names
       run: |
-          echo "${changes_file}"
+          echo "${changed_file}"
     #- name: Deploy via GCS
     #  run: |
     #    gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
