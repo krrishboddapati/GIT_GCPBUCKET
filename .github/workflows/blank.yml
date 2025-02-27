@@ -35,5 +35,5 @@ jobs:
          done
     - run: |
         gsutil -m rm -rf gs://git-gcp-cbase/${changed_file} || echo "$?"
-        gsutil -m cp ${changed_file} gs://git-gcp-cbase/
+        gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
             
