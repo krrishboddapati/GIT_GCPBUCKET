@@ -33,8 +33,9 @@ jobs:
          do
          echo "Do something with this ${changed_file}."     
          echo ${changed_file}
-         echo ${changed_file}
+         c_file=${changed_file}
          done
+    - run: echo "Hi ${c_file}"
     
         # gsutil -m rm  gs://git-gcp-cbase/${changes_file} || echo "$?"
         # gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
