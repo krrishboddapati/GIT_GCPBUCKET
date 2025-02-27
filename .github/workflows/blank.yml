@@ -28,18 +28,11 @@ jobs:
         project_id: inbound-guru-451904-c5
     - id: files
       uses: jitterbit/get-changed-files@v1
-    - run : |
-            c_file = ""
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
-         echo "Do something with this ${changed_file}."
-         c_file = ${changes_file}
-        
+         echo "Do something with this ${changed_file}."        
          done
-    - name: Print file names
-      run: |
-          echo "${c_file}"
     #- name: Deploy via GCS
     #  run: |
     #    gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
