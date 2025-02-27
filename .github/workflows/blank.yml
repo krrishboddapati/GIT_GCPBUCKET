@@ -28,6 +28,8 @@ jobs:
         project_id: inbound-guru-451904-c5
     - id: files
       uses: jitterbit/get-changed-files@v1
+    - run : |
+            c_file = ""
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
