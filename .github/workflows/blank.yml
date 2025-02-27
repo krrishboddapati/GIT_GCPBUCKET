@@ -34,11 +34,12 @@ jobs:
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
          echo "Do something with this ${changed_file}."
+         c_file = ${changes_file}
         
          done
     - name: Print file names
       run: |
-          echo "${changed_file}"
+          echo "${c_file}"
     #- name: Deploy via GCS
     #  run: |
     #    gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
