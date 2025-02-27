@@ -33,8 +33,7 @@ jobs:
          do
          echo "Do something with this ${changed_file}."        
          done
-    #- name: Deploy via GCS
-    #  run: |
-    #    gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
-    #    gsutil -m cp ${c_file} gs://git-gcp-cbase/
+    - run: |
+        gsutil -m rm -rf gs://git-gcp-cbase/${changed_file} || echo "$?"
+        gsutil -m cp ${changed_file} gs://git-gcp-cbase/
             
