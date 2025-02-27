@@ -31,10 +31,11 @@ jobs:
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
-         echo "Do something with this ${changed_file}."        
+         echo "Do something with this ${changed_file}."     
+         echo ${changed_file}
+         echo ${changed_file}
          done
-    - run: |
-           echo "Hello ${changed_file}"
+    
         # gsutil -m rm  gs://git-gcp-cbase/${changes_file} || echo "$?"
         # gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
             
