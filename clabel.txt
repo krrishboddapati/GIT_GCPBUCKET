@@ -1,4 +1,4 @@
-1.test 
+ 
 <lables>
     <fullName>AAAAAAAAAAAAAAAAA</fullName>
     <language>en_us</language>
