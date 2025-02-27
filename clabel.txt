@@ -1,4 +1,4 @@
-I am the one
+I am
 <lables>
     <fullName>AAAAAAAAAAAAAAAAA</fullName>
     <language>en_us</language>
