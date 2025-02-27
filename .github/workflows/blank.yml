@@ -31,8 +31,10 @@ jobs:
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
          echo "Do something with this ${changed_file}."
-         - name: Deploy via GCS
-            run: |
-            gsutil -m rm -rf gs://git-gcp-cbase/${changed_files} || echo "$?"
-            gsutil -m cp -r * gs://git-gcp-cbase/${changed_files}
-            done
+         c_file = ${changed_file}
+         done
+    - name: Deploy via GCS
+      run: |
+        gsutil -m rm -rf gs://git-gcp-cbase/${c_file} || echo "$?"
+        gsutil -m cp -rf gs://git-gcp-cbase/${changed_files}
+            
