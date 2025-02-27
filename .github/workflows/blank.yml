@@ -26,8 +26,8 @@ jobs:
         service_account_email: ${{ secrets.GCP_ACTION_EMAIL }}
         service_account_key: ${{ secrets.GCP_ACTION_KEY }}
         project_id: inbound-guru-451904-c5
-      id: files
-    - uses: jitterbit/get-changed-files@v1
+    - id: files
+      uses: jitterbit/get-changed-files@v1
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; do
          echo "Do something with this ${changed_file}."
