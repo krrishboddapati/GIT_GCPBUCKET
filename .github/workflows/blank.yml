@@ -36,7 +36,9 @@ jobs:
          done
          c_file=${changed_file}
          echo "cfile ${c_file}"
-    - run: echo "last ${c_file}"   
+         echo "CFILE=$c_file" >> $env:GITHUB_ENV
+        
+    - run: echo "last ${C_FILE}"   
     
         # gsutil -m rm  gs://git-gcp-cbase/${changes_file} || echo "$?"
         # gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
