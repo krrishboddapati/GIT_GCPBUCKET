@@ -31,8 +31,8 @@ jobs:
     - run: |
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
-         echo "Do something with this ${changed_file}."
-         def c_file = ${changed_file}
+         echo "Do something with this ${{ changed_file }}."
+         #def c_file = ${changed_file}
          done
     - name: Deploy via GCS
       run: |
