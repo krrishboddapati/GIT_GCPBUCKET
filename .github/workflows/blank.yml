@@ -36,7 +36,7 @@ jobs:
          done
          c_file=${changed_file}
          echo "cfile ${c_file}"
-         echo "CFILE=$c_file" >> $env:GITHUB_ENV
+         echo "CFILE=$c_file" >> $GITHUB_ENV
         
     - run: echo "last ${CFILE}"   
     
