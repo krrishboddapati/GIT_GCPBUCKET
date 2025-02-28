@@ -1,3 +1,4 @@
+Final
 <lables>
     <fullName>AAAAAAAAAAAAAAAAA</fullName>
     <language>en_us</language>

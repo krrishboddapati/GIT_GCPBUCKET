@@ -1,0 +1,47 @@
+name: GCS Deployment from GIT
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: 
+     - '.github/workflows/**'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "deploy"
+  deploy:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Setup gcloud CLI
+    - uses: google-github-actions/setup-gcloud@v0
+      with:
+        service_account_email: ${{ secrets.GCP_ACTION_EMAIL }}
+        service_account_key: ${{ secrets.GCP_ACTION_KEY }}
+        project_id: inbound-guru-451904-c5
+    - id: files
+      uses: jitterbit/get-changed-files@v1
+    - run: |
+         for changed_file in ${{ steps.files.outputs.all }}; 
+         do
+         echo "Do something with this ${changed_file}."     
+         #echo ${changed_file}
+         done
+         c_file+=${changed_file}
+         #echo "cfile ${c_file}"
+         echo "CFILE=$c_file" >> $GITHUB_ENV
+        
+    - run: echo "last ${CFILE}"   
+
+    - name: Deploy via GCS
+      run: |
+        gsutil -m rm -rf gs://gcp-git/${CFILE} || echo "$?"
+        gsutil -m cp ${CFILE}  gs://gcp-git/
+            
