@@ -42,4 +42,8 @@ jobs:
     
         # gsutil -m rm  gs://git-gcp-cbase/${changes_file} || echo "$?"
         # gsutil -m cp -r ${changed_file} gs://git-gcp-cbase/
+    - name: Deploy via GCS
+      run: |
+        gsutil -m rm -rf gs://gcp-git/${$C_FILE} || echo "$?"
+        gsutil -m cp -r ./github/${C_FILE}  gs://gcp-git/
             
