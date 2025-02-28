@@ -32,13 +32,13 @@ jobs:
          for changed_file in ${{ steps.files.outputs.all }}; 
          do
          echo "Do something with this ${changed_file}."     
-         echo ${changed_file}
+         #echo ${changed_file}
          done
          c_file=${changed_file}
-         echo "cfile ${c_file}"
+         #echo "cfile ${c_file}"
          echo "CFILE=$c_file" >> $GITHUB_ENV
         
-    - run: echo "last ${CFILE}"   
+    #- run: echo "last ${CFILE}"   
 
     - name: Deploy via GCS
       run: |
