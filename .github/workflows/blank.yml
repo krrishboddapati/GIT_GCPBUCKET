@@ -34,11 +34,11 @@ jobs:
          echo "Do something with this ${changed_file}."     
          #echo ${changed_file}
          done
-         c_file=${changed_file}
+         c_file+=${changed_file}
          #echo "cfile ${c_file}"
          echo "CFILE=$c_file" >> $GITHUB_ENV
         
-    #- run: echo "last ${CFILE}"   
+    - run: echo "last ${CFILE}"   
 
     - name: Deploy via GCS
       run: |
