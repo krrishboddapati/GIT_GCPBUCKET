@@ -45,5 +45,5 @@ jobs:
     - name: Deploy via GCS
       run: |
         gsutil -m rm -rf gs://gcp-git/${CFILE} || echo "$?"
-        gsutil -m cp -r ./github/${CFILE}  gs://gcp-git/
+        gsutil -m cp -r /${CFILE}  gs://gcp-git/
             
